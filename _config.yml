@@ -38,7 +38,7 @@ new_post_name: :title.md # 新帖子的文件名
 default_layout: post	# 默认布局模板
 titlecase: false 	# 设置是否可将标题转换为标题形式
 external_link:		
-  enable: true 		# 设置是否在新标签页中打开外部链接
+  enable: false 	# 设置是否在新标签页中打开外部链接
   field: site 		# 应用于整个网站
   exclude: ''		#
 filename_case: 0	#文件名大小写
@@ -49,7 +49,7 @@ future: true		#设置是否显示未来的文章
 highlight:		
   enable: true		#设置是否启用代码高亮
   line_number: true	#设置是否显示行号
-  auto_detect: false	#设置是否自动检测语言
+  auto_detect: true	#设置是否自动检测语言
   tab_replace: ''	#替换tab为''
   wrap: true		#在显示边界处换行显示
   hljs: false		#设置是否使用highlightjs主题高亮
