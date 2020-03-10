@@ -52,7 +52,7 @@ highlight:
   auto_detect: true	#设置是否自动检测语言
   tab_replace: ''	#替换tab为''
   wrap: true		#在显示边界处换行显示
-  hljs: false		#设置是否使用highlightjs主题高亮
+  hljs: true		#设置是否使用highlightjs主题高亮
 
 # 主页设置
 # path: 您的博客索引页面的根路径 （默认=''）
