@@ -114,6 +114,25 @@ feed:
   #在 rss 中最多生成的文章数(0显示所有)
   limit: 0
 
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+  title: true
+  date: true
+  path: true
+  text: false
+  raw: false
+  content: false
+  slug: false
+  updated: false
+  comments: false
+  link: false
+  permalink: false
+  excerpt: false
+  categories: false
+  tags: true
+
 # 部署方式
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
