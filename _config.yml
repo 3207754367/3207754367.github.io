@@ -9,14 +9,15 @@ subtitle: ''			#网站小标题
 description: '熊孩子的博客'	#网站描述
 keywords: 博客 个人博客 hexo	#关键字
 author: 某不知名的熊孩子	#网站作者
-language: en			#语言
+language: zh-CN		#语言
 timezone: 'Asia/Shanghai'	#时区
 
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 url: https://3207754367.github.io	#网站地址
 root: 3207754367.github.io 		#网站根目录
-permalink: :year/:month/:day/:urlname/	#永久链接	
+#永久链接
+permalink: posts/:abbrlink/
 permalink_defaults:			#永久链接默认值
 pretty_urls:
   trailing_index: true			#设置是否可从永久链接中删除尾随的'index.html'
@@ -36,7 +37,7 @@ skip_render: [README.md]
 # 新帖子配置
 new_post_name: :title.md # 新帖子的文件名
 default_layout: post	# 默认布局模板
-titlecase: false 	# 设置是否可将标题转换为标题形式
+titlecase: true 	# 设置是否可将标题转换为标题形式
 external_link:		
   enable: false 	# 设置是否在新标签页中打开外部链接
   field: site 		# 应用于整个网站
@@ -114,24 +115,14 @@ feed:
   #在 rss 中最多生成的文章数(0显示所有)
   limit: 0
 
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-  title: true
-  date: true
-  path: true
-  text: false
-  raw: false
-  content: false
-  slug: false
-  updated: false
-  comments: false
-  link: false
-  permalink: false
-  excerpt: false
-  categories: false
-  tags: true
+# 永久链接模块
+#crc16 & hex 效果为https://post.zz173.com/posts/66c8.html
+#crc16 & dec 效果为https://post.zz173.com/posts/65535.html
+#crc32 & hex 效果为https://post.zz173.com/posts/8ddf18fb.html
+#crc32 & dec 效果为https://post.zz173.com/posts/1690090958.html
+abbrlink:
+  alg: crc32  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex
 
 # 部署方式
 ## Docs: https://hexo.io/docs/deployment.html
