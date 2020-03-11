@@ -14,8 +14,11 @@ timezone: 'Asia/Shanghai'	#时区
 
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
-url: https://3207754367.github.io	#网站地址
-root: 3207754367.github.io 		#网站根目录
+
+#网站地址
+url: https://3207754367.github.io
+#网站根目录
+root: 3207754367.github.io
 #永久链接
 permalink: posts/:abbrlink/
 permalink_defaults:			#永久链接默认值
@@ -32,12 +35,12 @@ category_dir: categories  #类别目录，默认是categories 实际存放路径
 code_dir: downloads/code  #代码目录，默认是downloads/code 
 i18n_dir: :lang		  #国际化目录，默认与language一致
 # 指定不需要渲染的文件或文件夹，以“,”分开
-skip_render: [README.md]
+skip_render: 
 
 # 新帖子配置
 new_post_name: :title.md # 新帖子的文件名
 default_layout: post	# 默认布局模板
-titlecase: true 	# 设置是否可将标题转换为标题形式
+titlecase: false 	# 设置是否可将标题转换为标题形式
 external_link:		
   enable: false 	# 设置是否在新标签页中打开外部链接
   field: site 		# 应用于整个网站
@@ -96,7 +99,7 @@ ignore:
 # Extensions拓展插件配置
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-next
+theme: landscape  #hexo-theme-next
 
 # 自定义站点内容搜索
 # 需要先安装插件：
@@ -109,9 +112,9 @@ search:
 # 配置RSS
 feed: 
   #feed 类型 (atom/rss2)
-  type: atom   
+  type: #atom   
   #rss 路径
-  path: atom.xml  
+  path: #atom.xml  
   #在 rss 中最多生成的文章数(0显示所有)
   limit: 0
 

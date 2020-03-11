@@ -17,5 +17,18 @@
     "hexo-abbrlink": "^2.0.5",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-search": "^2.4.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3207754367/3207754367.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3207754367/3207754367.github.io/issues"
+  },
+  "homepage": "https://github.com/3207754367/3207754367.github.io#readme",
+  "description": ""
 }
