@@ -99,8 +99,8 @@ ignore:
 # theme拓展插件配置
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape  
-#theme: next
+#theme: landscape  
+theme: next
 
 # 自定义站点内容搜索
 # 需要先安装插件：
