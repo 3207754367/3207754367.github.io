@@ -131,7 +131,7 @@ abbrlink:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/3207754367/3207754367.github.io.git
+  repo: git@github.com:3207754367/3207754367.github.io.git
 	#部署到github
   #coding: git@git.coding.net/
 	# 部署到coding.net。取消注释可同时部署
