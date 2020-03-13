@@ -47,7 +47,7 @@ external_link:
 filename_case: 0	#文件名大小写
 render_drafts: false    #设置是否渲染草稿
 post_asset_folder: false #设置是否使用资源文件夹，Hexo将会创建新文章时自动创建一个文件夹
-relative_link: true	#设置是否把链接改为与根目录的相对位置
+relative_link: false	#设置是否把链接改为与根目录的相对位置
 future: true		#设置是否显示未来的文章
 highlight:		
   enable: true		#设置是否启用代码高亮
@@ -100,6 +100,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: next
+
 
 # 自定义站点内容搜索
 # 需要先安装插件：
