@@ -6,9 +6,9 @@ date: 2020-05-15 16:27:32
 tags:
 comments:
 ---
-![](https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=636593235,2377864621&fm=173&app=25&f=JPEG?w=617&h=123&s=B025F1144FDBBE01686721860300E08B)
 **各位小伙伴们可能还不知道，其实我们的windows10电脑中还隐藏了一个激进的性能模式——--"卓越性能模式"，今天小编就教大家开启它！**
 <!--more-->
+[](https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=636593235,2377864621&fm=173&app=25&f=JPEG?w=617&h=123&s=B025F1144FDBBE01686721860300E08B)
 **检查系统版本，必须要保证你的系统版本在Windows 10 1803 以上**
 
 在键盘上输入快捷键命令 `win + x` 在弹出的窗口中选择 `window Powershell (管理员) `
