@@ -30,8 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
       placeholder         : algoliaSettings.labels.input_placeholder,
       // Hide default icons of algolia search
       showReset           : false,
-      showSubmit          : false,
-      showLoadingIndicator: false,
+      showSubmit          : true,
+      showLoadingIndicator: true,
       cssClasses          : {
         input: 'search-input'
       }

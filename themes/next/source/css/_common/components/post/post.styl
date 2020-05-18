@@ -33,7 +33,14 @@
 
 .use-motion {
   if (hexo-config('motion.transition.post_block')) {
-    .post-block, .pagination, .comments {
+    .post-block {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 35px;
+   -webkit-box-shadow: 0 0 15px rgba(0, 0, 255, .5);
+   -moz-box-shadow: 0 0 15px rgba(0, 0, 255, .5);
+}
+ .pagination, .comments {
       opacity: 0;
     }
   }
