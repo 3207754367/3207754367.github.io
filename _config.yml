@@ -5,10 +5,10 @@
 
 # 网站
 title: 熊孩子博客		#网站标题
-subtitle: '欢迎访问我的博客～'	#网站小标题
+subtitle: ''	#网站小标题
 description: '熊孩子的博客'	#网站描述
-keywords: 博客	#关键字
-author: 某不知名的熊孩子	#网站作者
+keywords: 博客 hexo	#关键字
+author: 熊孩子 #网站作者
 language: zh-CN		#语言
 timezone: 'Asia/Shanghai'	#时区
 
@@ -22,8 +22,10 @@ root: /
 permalink: posts/:abbrlink/
 permalink_defaults:			#永久链接默认值
 pretty_urls:
-  trailing_index: true			#设置是否可从永久链接中删除尾随的'index.html'
-  trailing_html: true			#设置是否可从永久链接中删除尾随的'.html'
+  trailing_index: true
+  #设置是否可从永久链接中删除尾随的'index.html'
+  trailing_html: false 
+  #设置是否可从永久链接中删除尾随的'.html'
 
 # 目录
 source_dir: source 	  #资源目录，文件夹内的文件将上传至github中
@@ -48,8 +50,8 @@ external_link:
 filename_case: 0	#文件名大小写
 render_drafts: false    #设置是否渲染草稿
 post_asset_folder: false #设置是否使用资源文件夹，Hexo将会创建新文章时自动创建一个文件夹
-relative_link: false	#设置是否把链接改为与根目录的相对位置
-future: true		#设置是否显示未来的文章
+relative_link: true	#设置是否把链接改为与根目录的相对位置
+future: false	#设置是否显示未来的文章
 highlight:		
   enable: true		#设置是否启用代码高亮
   line_number: true	#设置是否显示行号
@@ -115,17 +117,6 @@ search:
   # 如只想索引文章，可设置为post
   field: all
   limit: 9999
-
-#字数统计
-symbols_count_time:
-  symbols: true
-  time: true
-  total_symbols: true
-  total_time: true
-  exclude_codeblock: true
-  awl: 4
-  wpm: 275
-  suffix: "mins." 
 
 # 配置RSS
 feed: 

@@ -10,6 +10,10 @@
   </div>
 {%- endif %}
 
+{% if theme.footer.counter %}
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{% endif %}	
+
 <div class="copyright">
   {% set copyright_year = date(null, 'YYYY') %}
   &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
@@ -19,8 +23,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }}</span>
 
+<span id="busuanzi_container_site_pv">本站总访问量:<span id="busuanzi_value_site_pv"></span>次 |</span>
+<span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span>人</span> <br/>
   {%- if config.symbols_count_time.total_symbols %}
-    <span class="post-meta-divider">|</span>
+    <span class="post-meta-divider"></span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
@@ -31,7 +37,7 @@
   {%- endif %}
 
   {%- if config.symbols_count_time.total_time %}
-    <span class="post-meta-divider">|</span>
+    <span class="post-meta-divider"></span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
@@ -50,7 +56,7 @@
 {%- endif %}
 
 {%- if theme.footer.powered.enable and theme.footer.theme.enable %}
-  <span class="post-meta-divider">|</span>
+  <span class="post-meta-divider"></span>
 {%- endif %}
 
 {%- if theme.footer.theme.enable %}
@@ -69,8 +75,4 @@
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ theme.add_this_id }}" async="async"></script>
   </div>
 {%- endif %}
-
-{{- next_inject('footer') }}
-
-
 

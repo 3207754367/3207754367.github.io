@@ -51,20 +51,22 @@ favicon:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  since: 2018
-
+  # 指定网站的建立日期  如果未定义，将使用当前年份
+  since: 
+  
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/v4.7.0/icons/
     # `heart` is recommended with animation in red (#ff0000).
-    name: heart
+    name: 
     # If you want to animate the icon, set it to true.
+    # 如果要为图标设置动画，请将其设置为true。
     animated: true
     # Change the color of icon, using Hex Code.
     color: "#808080"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright:
+  copyright: ☞
 
   powered:
     # Hexo link (Powered by Hexo).
@@ -96,7 +98,7 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: true
+  sidebar: false
   post: true
   language: zh_CN
 
@@ -136,8 +138,9 @@ menu:
   #commonweal: /404/ || heartbeat
 
 # Enable / Disable menu icons / item badges.
+# 启用/禁用菜单图标/项目标志。
 menu_settings:
-  icons: false
+  icons: true
   badges: true
 
 
@@ -161,10 +164,10 @@ sidebar:
   #  - always  expand for all pages automatically.
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
+  display: remove
 
   # Sidebar padding in pixels. 
-  padding: 5
+  padding: 2
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 5
   # Enable sidebar on narrow view (only for Muse | Mist).
@@ -172,10 +175,10 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/avatar.gif
+  url: #/images/avatar.gif
   # If true, the avatar will be dispalyed in circle.
  #如果为true，则头像将显示为圆形
-  rounded: true
+  rounded: false
   # If true, the avatar will be rotated with the cursor.
    # 如果为true，则头像将随着光标旋转
   rotated: false
@@ -225,7 +228,7 @@ toc:
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: true
   # Maximum heading depth of generated toc.
-  max_depth: 999
+  max_depth: 99
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -255,8 +258,8 @@ post_meta:
   item_text: true
   created_at: true
   updated_at:
-    enable: true
-    another_day: true
+    enable:
+    another_day:
   categories: true
 
 # Post wordcount display settings
@@ -265,12 +268,12 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+#  item_text_total: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
 
-# Reward (Donate)
+# Reward (Donate) 捐赠
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
@@ -293,17 +296,20 @@ follow_me:
   #RSS: /atom.xml || rss
 
 # Related popular posts
+# 相关热门帖子
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: false
-  title: # Custom header, leave empty to use the default one
-  display_in_home: false
+  title: 
+  #Custom header, leave empty to use the default one
+  #自定义标题，保留为空以使用默认标题
+  display_in_home: true  #是否在主页显示
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
+    isDate: false
+    isImage: false
+    isExcerpt: false
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -353,9 +359,10 @@ calendar:
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
   desktop: justify
-  mobile: center
+  mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
+# 减少宽度较窄的设备上的填充/边距缩进
 mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
@@ -380,7 +387,7 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: true
+  sidebar: false
   # Scroll percent label in b2t button.
   scrollpercent: true 
 
@@ -582,17 +589,22 @@ quicklink:
 # ---------------------------------------------------------------
 
 # Multiple Comment System Support
+# 评论系统
 comments:
   # Available values: tabs | buttons
   style: buttons
   # Choose a comment system to be displayed by default.
+  # 选择默认显示的注释系统。
   # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
   active: valine
   # Setting `true` means remembering the comment system selected by the visitor.
+  # 设置为true表示记住访问者选择的评论系统。
   storage: true
   # Lazyload all comment systems.
-  lazyload: false
+  # 延迟加载所有评论系统。
+  lazyload: true
   # Modify texts or order for any navs, here are some examples.
+  # 修改任何导航的文本或顺序，以下是一些示例。
   nav:
     #disqus:
     #  text: Load Disqus
@@ -731,14 +743,13 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
-  total_visitors_icon: user
+  total_visitors_icon: user-circle-o
   total_views: true
   total_views_icon: eye
   post_views: true
   post_views_icon: eye
-
 
 # ---------------------------------------------------------------
 # Search Services
