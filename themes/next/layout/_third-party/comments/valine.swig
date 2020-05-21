@@ -1,8 +1,8 @@
-{%- set valine_uri = theme.vendors.valine or '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js' %}
+{%- set valine_uri = theme.vendors.valine or '//unpkg.com/valine/dist/Valine.min.js' %}
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('https://cdn.jsdelivr.net/gh//AshinWang/SimpleValine/SimpleValine.min.js', () => {
+  NexT.utils.getScript('{{ valine_uri }}', () => {
     var GUEST = ['nick', 'mail', 'link'];
     var guest = '{{ theme.valine.guest_info }}';
     guest = guest.split(',').filter(item => {
@@ -26,5 +26,4 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-
 </script>

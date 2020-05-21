@@ -46,7 +46,5 @@
 
     </div>
   </aside>
-  <div id="sidebar-dimmer">
-</div>
+  <div id="sidebar-dimmer"></div>
 {% endmacro %}
-

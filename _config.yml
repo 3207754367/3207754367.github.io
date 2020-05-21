@@ -15,14 +15,14 @@ timezone: 'Asia/Shanghai'	#时区
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 #网站地
-url: http://ctrlssr.top
+url: http://blog.mpcloud.top
 root: /
  #网站根目录
 #永久链接
 permalink: posts/:abbrlink/
 permalink_defaults:			#永久链接默认值
 pretty_urls:
-  trailing_index: true
+  trailing_index: false
   #设置是否可从永久链接中删除尾随的'index.html'
   trailing_html: false 
   #设置是否可从永久链接中删除尾随的'.html'
@@ -109,14 +109,11 @@ ignore:
 theme: next
 
 
-# 自定义站点内容搜索
-# 需要先安装插件：
-# npm install hexo-generator-search --save
-search:
-  path: search.xml
-  # 如只想索引文章，可设置为post
-  field: all
-  limit: 9999
+# Algolia Search API Key
+algolia:
+  applicationID: 'T5WSZ2DTH2'
+  apiKey: '70474ba1d50ae3638032f99b096d6f5e'
+  indexName: 'mp'
 
 # 配置RSS
 feed: 
@@ -134,7 +131,6 @@ neat_enable: true
 # 压缩html（ejs，swig等也属于html格式片段）
 neat_html:
   enable: true
-  exclude:
 # 压缩css  
 neat_css:
   enable: true
@@ -146,11 +142,8 @@ neat_js:
   mangle: true #打印日志
   output:
   compress:
-  exclude: #排除文件
+  exclude:
     - '**/*.min.js'
-    - '**/jquery.fancybox.pack.js'
-    - '**/index.js'  
-
 # 永久链接模块
 #crc16 & hex 效果为https://post.zz173.com/posts/66c8.html
 #crc16 & dec 效果为https://post.zz173.com/posts/65535.html
@@ -167,7 +160,7 @@ deploy:
    repo:
     github: git@github.com:3207754367/3207754367.github.io.git,master
     gitcafe: git@e.coding.net:ctrl007/ctrl007.git,master
- - type: baidu_url_submitter
+# - type: baidu_url_submitter
 # - type: leancloud_counter_security_sync
 #leancloud_counter_security:
 #  enable_sync: false
@@ -177,17 +170,12 @@ deploy:
 #  password: # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 
-baidu_url_submit:
-  count: 5 # 提交最新的链接数
-  host: www.ctrlssr.top # 在百度站长平台中注册的域名,虽然官方推荐要带有 www, 但可以不带.
-  token: 7aocWiz4IS7kcrnx # 你的秘钥,每个人都不一样,获取方法在下面
-  path:  baidu_urls.txt # 文本文档的地址,新链接会保存在此文本文档里
+#baidu_url_submit:
+#  count: 5 # 提交最新的链接数
+#  host:  # 在百度站长平台中注册的域名,虽然官方推荐要带有 www, 但可以不带.
+#  token:  # 你的秘钥,每个人都不一样,获取方法在下面
+#  path:  baidu_urls.txt # 文本文档的地址,新链接会保存在此文本文档里
 
 # Aplayer播放器配置
 aplayer: 
   enable: true
-  js: 
-  	- https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
-  css: 
-  	- https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
-  meting: true

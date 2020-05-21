@@ -1,11 +1,11 @@
 .post-eof {
-  background: $grey-light;
-  height: auto;
-  margin: 0 10px auto auto;
+  background: #fff0; 
+  height: 10px;
+  margin: $post-eof-margin-top auto $post-eof-margin-bottom;
   text-align: center;
-  width: 70%;
+  width: auto;
 
-  .post-block:last-child & {
-    display: block;
+  .post-block:last-of-type & {
+    display: none;
   }
 }
