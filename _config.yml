@@ -52,13 +52,6 @@ render_drafts: false    #设置是否渲染草稿
 post_asset_folder: false #设置是否使用资源文件夹，Hexo将会创建新文章时自动创建一个文件夹
 relative_link: true	#设置是否把链接改为与根目录的相对位置
 future: false	#设置是否显示未来的文章
-highlight:		
-  enable: true		#设置是否启用代码高亮
-  line_number: true	#设置是否显示行号
-  auto_detect: true	#设置是否自动检测语言
-  tab_replace: ''	#替换tab为''
-  wrap: true		#在显示边界处换行显示
-  hljs: true		#设置是否使用highlightjs主题高亮
 
 # 主页设置
 # path: 您的博客索引页面的根路径 （默认=''）
@@ -73,7 +66,6 @@ index_generator:	#索引生成器
 default_category: uncategorized #设置默认分类方式，默认为未分类
 
 category_map: #设置分类别名
-王者荣耀: 王者荣耀
 
 
 tag_map: #设置标签别名
@@ -161,13 +153,6 @@ deploy:
     github: git@github.com:3207754367/3207754367.github.io.git,master
     gitcafe: git@e.coding.net:ctrl007/ctrl007.git,master
 # - type: baidu_url_submitter
-# - type: leancloud_counter_security_sync
-#leancloud_counter_security:
-#  enable_sync: false
-#  app_id: 1QtC3CWpNfuKhY8wpmqBqLcs-9Nh9j0Va
-#  app_key: IIreMpVAz3r2a9F18pWfjC0m
-#  username: # Will be asked while deploying if is left blank
-#  password: # Recommmended to be left blank. Will be asked while deploying if is left blank
 
 
 #baidu_url_submit:

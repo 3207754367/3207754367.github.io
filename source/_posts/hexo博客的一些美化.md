@@ -347,7 +347,7 @@ touch /themes/next/layout/links.swig
 
 ### 最后，现在在主题的配置文件末尾处新增友链的配置
 
-- ```
+```
   mylinks:
   
   - nickname: 		#友链名称
@@ -361,8 +361,6 @@ touch /themes/next/layout/links.swig
     info:  		#友链说明
   ```
   
-  
-
 ## 添加评论系统
 
 这里我们以`gitalk` 为例
@@ -396,6 +394,4 @@ gitalk:
   language: zh-CN
 
 ```
-
-
 

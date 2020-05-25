@@ -27,7 +27,7 @@ custom_file_path:
   #sidebar: source/_data/sidebar.swig
   #postMeta: source/_data/post-meta.swig
   postBodyEnd: source/_data/post-body-end.swig #文章末尾添加感谢虐读
-  #footer: source/_data/footer.swig
+  footer: source/_data/footer.swig
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
@@ -824,7 +824,7 @@ mermaid:
 # For more information: http://velocityjs.org
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | flipXIn | flipYIn | flipBounceXIn | flipBounceYIn
@@ -834,8 +834,8 @@ motion:
     # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
     # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
     post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
+    post_header: flipYIn
+    post_body: expandIn   
     coll_header: slideLeftIn
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
