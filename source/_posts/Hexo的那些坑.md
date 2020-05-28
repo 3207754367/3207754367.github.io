@@ -3,8 +3,9 @@ title: Hexo初体验
 tags: Hexo
 abbrlink: 786487f2
 date: 2020-03-14 08:08:54
+description: Hexo搭建个人博客的步骤
+categories: hexo
 ---
-Hexo搭建个人博客的步骤
 <!--more-->
 **0. 安装Git Node.js npm**
 ```bash

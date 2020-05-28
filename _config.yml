@@ -4,14 +4,18 @@
 ## 汉化：该配置文件由酷友@https://www.coolapk.com/u/827277?from=qr 汉化
 
 # 网站
-title: 熊孩子博客		#网站标题
+title: ma's Blog #网站标题
 subtitle: ''	#网站小标题
-description: '熊孩子的博客'	#网站描述
-keywords: 博客 hexo	#关键字
+description: 总有人会赢，那这个人凭什么不能是你和我 #网站描述
+keywords: hexo
+#关键字
 author: 熊孩子 #网站作者
 language: zh-CN		#语言
 timezone: 'Asia/Shanghai'	#时区
-
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 #网站地
@@ -19,12 +23,12 @@ url: http://blog.mpcloud.top
 root: /
  #网站根目录
 #永久链接
-permalink: posts/:abbrlink/
+permalink: posts/:abbrlink.html
 permalink_defaults:			#永久链接默认值
 pretty_urls:
-  trailing_index: false
+  trailing_index: 
   #设置是否可从永久链接中删除尾随的'index.html'
-  trailing_html: false 
+  trailing_html:
   #设置是否可从永久链接中删除尾随的'.html'
 
 # 目录
@@ -37,7 +41,7 @@ code_dir: downloads/code  #代码目录，默认是downloads/code
 i18n_dir: :lang		  #国际化目录，默认与language一致
 # 指定不需要渲染的文件或文件夹，以“,”分开
 skip_render: 
-porn_dir: porn
+porn_dir: 
 
 # 新帖子配置
 new_post_name: :title.md # 新帖子的文件名
@@ -106,15 +110,6 @@ algolia:
   applicationID: 'T5WSZ2DTH2'
   apiKey: '70474ba1d50ae3638032f99b096d6f5e'
   indexName: 'mp'
-
-# 配置RSS
-feed: 
-  #feed 类型 (atom/rss2)
-  type: atom   
-  #rss 路径
-  path: atom.xml  
-  #在 rss 中最多生成的文章数(0显示所有)
-  limit: 0
 
 
 # hexo-neat
