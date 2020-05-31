@@ -6,7 +6,7 @@
 # 网站
 title: ma's Blog #网站标题
 subtitle: ''	#网站小标题
-description: 总有人会赢，那这个人凭什么不能是你和我 #网站描述
+description: 总有人会赢，那凭什么不能是你 #网站描述
 keywords: hexo
 #关键字
 author: 熊孩子 #网站作者
@@ -19,7 +19,7 @@ baidusitemap:
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 #网站地
-url: http://blog.mpcloud.top
+url: http://mpcloud.top
 root: /
  #网站根目录
 #永久链接
@@ -89,7 +89,7 @@ use_date_for_updated: false	#设置是否启用更新的日期
 
 # Pagination 分页
 ## 将per_page设置为0以禁用分页
-per_page: 0
+per_page: 10
 pagination_dir: page
 
 # 包含/排除文件
@@ -125,12 +125,19 @@ neat_css:
     - '**/*.min.css'
 # 压缩js
 neat_js:
-  enable: false
+  enable: true
   mangle: true #打印日志
   output:
   compress:
   exclude:
     - '**/*.min.js'
+    - '**/themes/next/source/js/schemes/*'
+    - '**/themes/next/source/js/utils.js'
+    - '**/themes/next/source/js/local-search.js'
+    - '**/themes/next/source/js/motion.js'
+    - '**/themes/next/source/js/algolia-search.js'
+    - '**/themes/next/source/js/bookmark.js'
+    - '**/themes/next/source/js/next-boot.js'
 # 永久链接模块
 #crc16 & hex 效果为https://post.zz173.com/posts/66c8.html
 #crc16 & dec 效果为https://post.zz173.com/posts/65535.html
