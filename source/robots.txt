@@ -14,5 +14,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://mpcloud.top/sitemap.xml
-Sitemap: https://mpcloud.top/baidusitemap.xml
+Sitemap: https://blog.mpcloud.top/sitemap.xml
+Sitemap: https://blog.mpcloud.top/baidusitemap.xml

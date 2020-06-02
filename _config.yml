@@ -166,3 +166,9 @@ deploy:
 # Aplayer播放器配置
 aplayer: 
   enable: true
+
+# 图片懒加载
+lazyload:
+  enable: true 
+  onlypost: false
+  loadingImg: 
