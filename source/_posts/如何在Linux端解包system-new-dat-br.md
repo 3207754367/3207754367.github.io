@@ -1,7 +1,7 @@
 ---
-title: 如何在Linux端解包system.new.dat.br
+title: 在Linux端解包system.new.dat.br
 categories: Linux
-description: 在Linux端将system.new.dat.br文件一步一步的变成我们熟悉的system.img
+description: 进来看看在Linux端是如何将system.new.dat.br文件一步一步的变成我们熟悉的system.img的。叭
 tags: 教程
 abbrlink: 93f66722
 date: 2020-06-12 01:51:20
@@ -17,7 +17,7 @@ apt install brotli
 解压官方卡刷包,进入目录执行命令：
 ```  bash
 brotli -d system.new.dat.br -o system.new.dat
-````
+```
 等待几分钟即可转换成功
 
 ## 把`system.new.dat`文件转换成 `system.img`文件
