@@ -3,17 +3,17 @@ title: Android上跳过google锁
 categories: Android教程
 abbrlink: 48f1e393
 date: 2020-05-17 09:18:22
-tags: 
+tags: Android
 comments:
-description: 进来看看怎么跳过这该死的frp帐号锁趴 
+description: 跳过这该死的frp帐号锁
 ---
 <!--more-->
 <img src="https://gitee.com/maping666/image/raw/master/googlelock.jpeg" />
 安装过Gapps套件的小伙伴应该都知道Google开机引导锁,  这其实是因为android的frp机制(factory reset protection)导致的,  android手机恢复出厂设置的操作分为信任和不信任操作: 在解锁装态通过设置里的恢复出厂设置选项进行重置的操作,  属于信任操作.  所以, 在关机状态下通过Fastboot或recovery中进行的重置操作, 就属于不信任操作.  而使用不信任操作进行恢复出厂设置, 开机就会触发frp机制导致设备被锁. 现在让我们来跳过这烦人的验证吧！
 
-**禁用出厂重置保护 :**
+禁用出厂重置保护:
 
-## **开机状态下退出Google账户**
+## 开机状态下退出Google账户
 
 **避免进行不信任操作, 在刷机前就将Google帐号从系统中移除.**
 
@@ -30,11 +30,11 @@ DPC根据它的值来发送广播通知Google Play服务
 
 
 
-## **顺时针点屏幕四角法**
+## 顺时针点屏幕四角法
 
 这是Gapps套件专属过引导方法，连点屏幕四角就可跳过此引导（**顺时针**方向, 从左上角开始.  Google官方像素系的 Google Service Framework 没有此功能
 
-## 更改`USER_SETUP_COMPLETE`和`DEVICE_PROVISIONED`
+## 更改USER_SETUP_COMPLETE和DEVICE_PROVISIONED
 
 GoogleSetupWizard完成引导后会把这俩的值由0改为1, 所以我们先它一步在它前面把这俩值改成1就好了
 
@@ -73,7 +73,7 @@ dd if=/dev/zero of=/dev/block/bootdevice/by-name/config
 dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
 ```
 
-解锁**Bootloader**过的小伙伴还可以通过`fastboot erase frp` 或 `fastboot erase config` 命令来清除谷歌锁
+还可以通过`fastboot erase frp` 或 `fastboot erase config` 命令来清除谷歌锁
 
 
 

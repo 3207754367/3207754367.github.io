@@ -1,7 +1,7 @@
 ---
-title: 在Linux端解包system.new.dat.br
+title: 解包/打包system.new.dat.br
 categories: Linux
-description: 进来看看在Linux端是如何将system.new.dat.br文件一步一步的变成我们熟悉的system.img的。叭
+description: Linux端将system.new.dat.br转system.img并解包/打包
 tags: 教程
 abbrlink: 93f66722
 date: 2020-06-12 01:51:20
@@ -9,7 +9,7 @@ keywords:
 comments:
 ---
 <!--more-->
-## 把`system.new.dat.br`文件转换成 `system.new.dat`文件
+## 把system.new.dat.br转换成system.new.dat文件
 安装`brotli`
 ```  bash
 apt install brotli
@@ -20,7 +20,7 @@ brotli -d system.new.dat.br -o system.new.dat
 ```
 等待几分钟即可转换成功
 
-## 把`system.new.dat`文件转换成 `system.img`文件
+## 把system.new.dat转换成system.img
 
 执行下方的命令获取`sdat2img.py`脚本
 ``` bash
@@ -32,7 +32,7 @@ apt install curl python -y && curl -O  https://raw.githubusercontent.com/xpirt/s
 ```
 等待执行成功，脚本将会在当前目录下输出`system.img`文件
 
-## 挂载`system.img`镜像进行查看
+## 挂载system.img镜像进行查看
 创建一个空的文件夹,比如`system`
 ``` bash
 mkdir  system

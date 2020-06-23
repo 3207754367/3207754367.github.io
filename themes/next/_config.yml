@@ -339,7 +339,7 @@ calendar:
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
   desktop: justify
-  mobile: justify
+  mobile: start
 
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: false
@@ -361,7 +361,7 @@ codeblock:
     # Show text copy result.
     show_result: true
     # Available values: default | flat | mac
-    style: mac
+    style: flat
 
 back2top:
   enable: true

@@ -6,6 +6,7 @@ keywords:
 categories: 分类
 comments:
 description:  概述
+mathjax: true
 ---
 ![]()
 <!--more-->
