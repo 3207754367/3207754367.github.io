@@ -34,6 +34,6 @@
     "hexo-server": "^1.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-tag-aplayer": "^3.0.4",
-    "pjax": "file:pjax"
+    "pjax": "^0.2.8"
   }
 }

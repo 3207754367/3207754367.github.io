@@ -6,10 +6,10 @@
 # 网站
 title: ma's Blog #网站标题
 subtitle: ''	#网站小标题
-description: 总有人会赢，那凭什么不能是你 #网站描述
-keywords: hexo
+description: 个人博客 #网站描述
+keywords: blog,android,win10
 #关键字
-author: 熊孩子 #网站作者
+author:  #网站作者
 language: zh-CN		#语言
 timezone: 'Asia/Shanghai'	#时区
 sitemap:
@@ -19,7 +19,7 @@ baidusitemap:
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 #网站地
-url: http://mpcloud.top
+url: http://blog.mpcloud.top
 root: /
  #网站根目录
 #永久链接
