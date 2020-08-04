@@ -1,3 +1,9 @@
+---
+title: 404
+permalink: /404
+comments: false
+mathjax: true
+---
 
 <!DOCTYPE html>
 <html>
@@ -17,17 +23,17 @@ body,html{
 	height: 100%;
 }
 body{
-	background: #ff6500;
+	background: #ffffff;
 	font-family: "微软雅黑";
 }
 .notice-wrap{
-	padding-top: 30px;
+	padding-top: 21px;
 }
 .notice{
 	margin: 0 auto;
-	width: 682px;
-	height: 633px;
-	background: url(https://s1.ax1x.com/2020/04/12/GLHA2D.png) no-repeat;
+	width: auto;
+	height: auto;
+	background: url(https://s1.ax1x.com/2020/08/05/aD7PyT.png) no-repeat;
 }
 .notice h1{
 	padding-top: 225px;
@@ -36,7 +42,7 @@ body{
 	text-align: center;
 }
 .notice p{
-	margin: 0 62px;
+	margin: 0 25px;
 	font-size: 18px;
 	color: #666;
 	text-indent: 36px;
@@ -49,11 +55,11 @@ p span{
 	margin-top: 45px;
 }
 .notice .notice-tel{
-	padding-bottom: 54px;
+	padding-bottom: 25px;
 	border-bottom: 2px solid #f2f2f2;
 }
 .notice-foot{
-	margin-top: 24px;
+	margin-top: 20px;
 }
 .notice-foot p{
 	font-size: 18px;
@@ -61,19 +67,15 @@ p span{
 	text-align: center;}
 </style>
 <body>
-	<div class="notice-wrap">
-		<div class="notice">
-			<h1></h1>
-			<p class="notice-cont">尊敬的访客您好，您正在访问的资源不存在!!!∑(°Д°ノ)ノ</p>
-			<p class="notice-tel">请您检查链接是否正确 或联系邮箱: maping13579@gmail.com <br />  <span>感谢您对本站的支持</span></p>
-			<div class="notice-foot">
-				<p> </p>
-				<p>错误代码：404</p>
-			</div>
-			<audio autoplay>
-<audio src="sl.mp3" loop autoplay hidden="true" ><!-- ！BGM！-->
-</audio>
-		</div>
-	</div>
+<div class="notice-wrap">
+<div class="notice">
+<h1></h1>
+<p> 您访问的资源现在很害怕</p>
+<p></p>
+</div>
+<audio autoplay>
+<audio src="../sl.mp3" loop autoplay hidden="true" > </audio>
+</div>
+</div>
 </body>
 </html>

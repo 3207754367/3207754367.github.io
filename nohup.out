@@ -1,0 +1,3 @@
+(node:20351) ExperimentalWarning: The fs.promises API is experimental
+INFO  Deleted database.
+INFO  Deleted public folder.
