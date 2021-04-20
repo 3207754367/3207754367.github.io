@@ -19,7 +19,7 @@ baidusitemap:
 # 网站地址
 ## 如果您的网站位于子目录中，则将url设置为“ http://yoursite.com/child”，将根目录设置为'/child/'
 #网站地
-url: http://blog.mpcloud.top
+url: http://blog.mpcloud.top/
 root: /
  #网站根目录
 #永久链接
