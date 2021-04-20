@@ -8,7 +8,6 @@ comments:
 description: 跳过这该死的frp帐号锁
 ---
 <!--more-->
-<img src="https://gitee.com/maping666/image/raw/master/googlelock.jpeg" />
 安装过Gapps套件的小伙伴应该都知道Google开机引导锁,  这其实是因为android的frp机制(factory reset protection)导致的,  android手机恢复出厂设置的操作分为信任和不信任操作: 在解锁装态通过设置里的恢复出厂设置选项进行重置的操作,  属于信任操作.  所以, 在关机状态下通过Fastboot或recovery中进行的重置操作, 就属于不信任操作.  而使用不信任操作进行恢复出厂设置, 开机就会触发frp机制导致设备被锁. 现在让我们来跳过这烦人的验证吧！
 
 禁用出厂重置保护:

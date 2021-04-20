@@ -58,4 +58,8 @@
   </div>
 {%- endif %}
 
+{%- if theme.snow.enable %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/snow1.js"></script>
+{%- endif %}
+
 {{- next_inject('footer') }}

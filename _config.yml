@@ -111,6 +111,12 @@ algolia:
   apiKey: '70474ba1d50ae3638032f99b096d6f5e'
   indexName: 'mp'
 
+# local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # hexo-neat
 # md博文压缩
@@ -169,6 +175,6 @@ aplayer:
 
 # 图片懒加载
 lazyload:
-  enable: true 
+  enable: false 
   onlypost: false
   loadingImg: 
