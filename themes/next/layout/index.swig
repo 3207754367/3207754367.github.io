@@ -1,7 +1,7 @@
 {% extends '_layout.swig' %}
 {% import '_macro/sidebar.swig' as sidebar_template with context %}
 
-{% block title %} {{ config.title }} -  {{ theme.description }} {% endblock %}
+{% block title %} {{ config.title }}  {% endblock %}
 
 {% block class %}index posts-expand{% endblock %}
 
