@@ -85,7 +85,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## 除非在post 中设置，否则使用帖子的日期作为更新日期
-use_date_for_updated: false	#设置是否启用更新的日期
+updated_option: true	#设置是否启用更新的日期
 
 # Pagination 分页
 ## 将per_page设置为0以禁用分页
