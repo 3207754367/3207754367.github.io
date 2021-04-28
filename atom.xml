@@ -6,7 +6,7 @@
   <link href="http://blog.mpcloud.top/atom.xml" rel="self"/>
   
   <link href="http://blog.mpcloud.top/"/>
-  <updated>2021-04-27T14:45:45.879Z</updated>
+  <updated>2021-04-28T06:38:25.519Z</updated>
   <id>http://blog.mpcloud.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.mpcloud.top/posts/2330e9bb.html"/>
     <id>http://blog.mpcloud.top/posts/2330e9bb.html</id>
     <published>2021-04-27T05:34:37.000Z</published>
-    <updated>2021-04-27T14:45:45.879Z</updated>
+    <updated>2021-04-28T06:38:25.519Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h3 id="利用-magisk-模块-ADB-amp-Fastboot-for-Android-NDK-在termux中免root使用-adb-amp-fastboot"><a href="#利用-magisk-模块-ADB-amp-Fastboot-for-Android-NDK-在termux中免root使用-adb-amp-fastboot" class="headerlink" title="利用 magisk 模块 ADB &amp; Fastboot for Android NDK 在termux中免root使用 adb &amp; fastboot"></a>利用 <code>magisk</code> 模块 <code>ADB &amp; Fastboot for Android NDK</code> 在<code>termux</code>中免root使用 <code>adb &amp; fastboot</code></h3><ul><li>克隆magisk模块作者开源的仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $PREFIX&#x2F;local&#x2F;bin &amp;&amp; git clone https:&#x2F;&#x2F;github.com&#x2F;Magisk-Modules-Repo&#x2F;adb-ndk $PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk &amp;&amp; chmod +x -R $PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk&#x2F;bin</span><br></pre></td></tr></table></figure></li><li>将克隆下来的仓库加入termux环境变量并使其立即生效<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;&quot;$PATH:$PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk&#x2F;bin&quot;&#39; &gt;&gt; ~&#x2F;.bashrc &amp;&amp; source ~&#x2F;.bashrc </span><br></pre></td></tr></table></figure></li><li>验证是否成功生效(居然支持adb pair 哈哈 )<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://gitee.com/mpcloud/my_picture_bed/raw/master/6ba0ddab.jpg" alt="验证"></li></ul>]]></content>
     
@@ -32,8 +32,6 @@
     
     <category term="termux" scheme="http://blog.mpcloud.top/categories/termux/"/>
     
-    
-    <category term="免root使用adb &amp; fadtboot" scheme="http://blog.mpcloud.top/tags/%E5%85%8Droot%E4%BD%BF%E7%94%A8adb-fadtboot/"/>
     
   </entry>
   
@@ -61,7 +59,7 @@
     <link href="http://blog.mpcloud.top/posts/d12c2325.html"/>
     <id>http://blog.mpcloud.top/posts/d12c2325.html</id>
     <published>2021-04-25T04:50:49.000Z</published>
-    <updated>2021-04-27T15:17:18.295Z</updated>
+    <updated>2021-04-28T06:38:58.975Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h1 id="使用-Termux-镜像"><a href="#使用-Termux-镜像" class="headerlink" title="使用 Termux 镜像"></a>使用 Termux 镜像</h1><p>在较新版的 Termux 中，官方提供了图形界面（TUI）来半自动替换镜像，推荐使用该种方式以规避其他风险。 在 Termux 中执行如下命令<br><code>termux-change-repo</code></p><h2 id="命令行替换"><a href="#命令行替换" class="headerlink" title="命令行替换"></a>命令行替换</h2><p>使用如下命令行替换官方源为 TUNA 镜像源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/game.list</span><br><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list.d/science.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br></pre></td></tr></table></figure></p><h3 id="配置openjdk环境"><a href="#配置openjdk环境" class="headerlink" title="配置openjdk环境"></a>配置openjdk环境</h3><ol><li>下载 <code>openjdk</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/Lzhiyong/termux-ndk/releases/download/openjdk/openjdk-11.0.1.tar.xz</span><br></pre></td></tr></table></figure></li><li>解压到 <code>$PREFIX/local</code> (路径可以自定义 配置环境变量的时候能找到就行)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xJvf openjdk-11.0.1.tar.xz -C <span class="variable">$PREFIX</span>/<span class="built_in">local</span>/openjdk-11</span><br></pre></td></tr></table></figure></li><li>加入环境变量并使其立即生效（以.zshrc为例）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JAVA_HOME=&quot;$PREFIX/local/openjdk-11&quot;\nexport PATH=&quot;$PATH:$JAVA_HOME/bin&quot;&#x27;</span> &gt;&gt; ~/.zshrc  &amp;&amp; <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></li><li>测试是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>显示java版本信息便是配置成功</li></ol><p><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://gitee.com/mpcloud/my_picture_bed/raw/master/ec098c0b3fd24df6c8e16ac1956fbcc1960cbc9e.jpg" alt="显示java版本信息便是配置成功"></p>]]></content>
     
@@ -73,8 +71,6 @@
     <category term="termux" scheme="http://blog.mpcloud.top/categories/termux/"/>
     
     
-    <category term="termux" scheme="http://blog.mpcloud.top/tags/termux/"/>
-    
   </entry>
   
   <entry>
@@ -82,7 +78,7 @@
     <link href="http://blog.mpcloud.top/posts/93f66722.html"/>
     <id>http://blog.mpcloud.top/posts/93f66722.html</id>
     <published>2020-06-11T17:51:20.000Z</published>
-    <updated>2021-04-10T02:45:43.680Z</updated>
+    <updated>2021-04-28T06:39:20.175Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h2 id="把system-new-dat-br转换成system-new-dat文件"><a href="#把system-new-dat-br转换成system-new-dat文件" class="headerlink" title="把system.new.dat.br转换成system.new.dat文件"></a>把system.new.dat.br转换成system.new.dat文件</h2><p>安装<code>brotli</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install brotli</span><br></pre></td></tr></table></figure><br>解压官方卡刷包,进入目录执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brotli -d system.new.dat.br -o system.new.dat</span><br></pre></td></tr></table></figure><br>等待几分钟即可转换成功</p><h2 id="把system-new-dat转换成system-img"><a href="#把system-new-dat转换成system-img" class="headerlink" title="把system.new.dat转换成system.img"></a>把system.new.dat转换成system.img</h2><p>执行下方的命令获取<code>sdat2img.py</code>脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install curl python -y &amp;&amp; curl -O  https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py &amp;&amp; chmod +x sdat2img.py</span><br></pre></td></tr></table></figure><br>运行<code>sdat2img.py</code>脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sdat2img.py system.transfer.list system.new.dat system.img</span><br></pre></td></tr></table></figure><br>等待执行成功，脚本将会在当前目录下输出<code>system.img</code>文件</p><h2 id="挂载system-img镜像进行查看"><a href="#挂载system-img镜像进行查看" class="headerlink" title="挂载system.img镜像进行查看"></a>挂载system.img镜像进行查看</h2><p>创建一个空的文件夹,比如<code>system</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir  system</span><br></pre></td></tr></table></figure><br>挂载<code>system.img</code>镜像至刚刚新增的<code>system</code>文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o loop system.img  system</span><br></pre></td></tr></table></figure><br>现在，你可以使用<code>ls</code>命令进入<code>system</code>文件夹查看镜像内的文件了.</p><h2 id="将修改后的文件打包回去"><a href="#将修改后的文件打包回去" class="headerlink" title="将修改后的文件打包回去"></a>将修改后的文件打包回去</h2><p>获取<code>make_ext4fs</code>工具<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://github.com/Loren-Yi/make_ext4fs/raw/master/make_ext4fs &amp;&amp; chmod +x make_ext4fs</span><br></pre></td></tr></table></figure><br>使用 <code>make_ext4fs</code>工具打包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./make_ext4fs -s  -S file_contexts -l 2048M -a system new_system.img system/</span><br></pre></td></tr></table></figure><br>命令参数说明：<br>// -s 表示安静处理，不输出动作，可以不带该参数<br>// -T 表示Unix时间戳，对system.img中的文件设置修改时间，执行“<br>date +%s”获取某个时间点的时间戳,也可以直接不用-T 1421464178<br>// -S 表示sepolicy 的file_contexts，把该文件放到此目录下，文件取自官方system/root路径或者卡刷包自带（解压内核，在内核里面）<br>// -l 表示最大的文件大小（受限于分区大小）；可以ls -l 当前转格式出来的system大小、单位也可以为MB<br>// -a 表示Android的mount点，比如system、userdata、recovery<br>// new_system.img 表示输出文件名<br>// system/ 表示输入目录，该目录下有framework、app、bin等目录</p>]]></content>
     
@@ -93,8 +89,6 @@
     
     <category term="Linux" scheme="http://blog.mpcloud.top/categories/Linux/"/>
     
-    
-    <category term="教程" scheme="http://blog.mpcloud.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -122,7 +116,7 @@
     <link href="http://blog.mpcloud.top/posts/48f1e393.html"/>
     <id>http://blog.mpcloud.top/posts/48f1e393.html</id>
     <published>2020-05-17T01:18:22.000Z</published>
-    <updated>2021-04-20T03:38:09.697Z</updated>
+    <updated>2021-04-28T06:38:32.955Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><p>安装过Gapps套件的小伙伴应该都知道Google开机引导锁,  这其实是因为android的frp机制(factory reset protection)导致的,  android手机恢复出厂设置的操作分为信任和不信任操作: 在解锁装态通过设置里的恢复出厂设置选项进行重置的操作,  属于信任操作.  所以, 在关机状态下通过Fastboot或recovery中进行的重置操作, 就属于不信任操作.  而使用不信任操作进行恢复出厂设置, 开机就会触发frp机制导致设备被锁. 现在让我们来跳过这烦人的验证吧！</p><p>禁用出厂重置保护:</p><h2 id="开机状态下退出Google账户"><a href="#开机状态下退出Google账户" class="headerlink" title="开机状态下退出Google账户"></a>开机状态下退出Google账户</h2><p><strong>避免进行不信任操作, 在刷机前就将Google帐号从系统中移除.</strong></p><p>使<code>出厂重置保护(Factory Reset Protection)</code>变成禁用状态.  如果要禁用出厂重置保护, DPC必须设置<code>disableFactoryResetProtectionAdmin</code>键值为<code>true</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`DevicePolicyManager.setApplicationRestrictions()` 中的</span><br><span class="line">`disableFactoryResetProtectionAdmin`默认值为`<span class="literal">false</span>`</span><br><span class="line"> 禁用FRP只需要将值改为`<span class="literal">true</span>`就行了. </span><br><span class="line">DPC根据它的值来发送广播通知Google Play服务</span><br><span class="line">`com.google.android.gms.auth.FRP_CONFIG_CHANGED` 作出相应改变</span><br></pre></td></tr></table></figure><p>相关文档: <a href="https://developer.android.google.cn/work/dpc/security?hl=fi#disable_factory_reset_protection">google开发者文档</a></p><h2 id="顺时针点屏幕四角法"><a href="#顺时针点屏幕四角法" class="headerlink" title="顺时针点屏幕四角法"></a>顺时针点屏幕四角法</h2><p>这是Gapps套件专属过引导方法，连点屏幕四角就可跳过此引导（<strong>顺时针</strong>方向, 从左上角开始.  Google官方像素系的 Google Service Framework 没有此功能</p><h2 id="更改USER-SETUP-COMPLETE和DEVICE-PROVISIONED"><a href="#更改USER-SETUP-COMPLETE和DEVICE-PROVISIONED" class="headerlink" title="更改USER_SETUP_COMPLETE和DEVICE_PROVISIONED"></a>更改USER_SETUP_COMPLETE和DEVICE_PROVISIONED</h2><p>GoogleSetupWizard完成引导后会把这俩的值由0改为1, 所以我们先它一步在它前面把这俩值改成1就好了</p><ul><li>打开命令行窗口输入以下命令</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put secure user_setup_complete 1</span><br><span class="line">adb shell settings put global device_provisioned 1</span><br><span class="line">adb shell reboot</span><br></pre></td></tr></table></figure><p>或者也可以直接删除<code>system/priv-app/SetupWizard</code>, 如果系统原来自带的Provision没有被Google家的SetupWizard覆盖, SetupWizard被删除后Provision会把这两个值直接设为1.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Provision：</span><br><span class="line"></span><br><span class="line">// Add a persistent setting to allow other apps to know the device has been provisioned.</span><br><span class="line">Settings.Global.putInt(getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 1);</span><br><span class="line">Settings.Secure.putInt(getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 1);</span><br></pre></td></tr></table></figure><h1 id="清空-config-或-frp-分区"><a href="#清空-config-或-frp-分区" class="headerlink" title="清空 config 或 frp 分区"></a>清空 config 或 frp 分区</h1><p>谷歌锁的状态是存放在这个分区上的，那我们只要把这个分区清空就好了。</p><p>由于此分区不存在文件系统，清空的方法是往这个分区里填满0即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/dev/block/bootdevice/by-name/config</span><br></pre></td></tr></table></figure><p>或者: </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/dev/block/bootdevice/by-name/frp</span><br></pre></td></tr></table></figure><p>还可以通过<code>fastboot erase frp</code> 或 <code>fastboot erase config</code> 命令来清除谷歌锁</p>]]></content>
     
@@ -133,8 +127,6 @@
     
     <category term="Android教程" scheme="http://blog.mpcloud.top/categories/Android%E6%95%99%E7%A8%8B/"/>
     
-    
-    <category term="Android" scheme="http://blog.mpcloud.top/tags/Android/"/>
     
   </entry>
   
@@ -162,7 +154,7 @@
     <link href="http://blog.mpcloud.top/posts/786487f2.html"/>
     <id>http://blog.mpcloud.top/posts/786487f2.html</id>
     <published>2020-03-14T00:08:54.000Z</published>
-    <updated>2021-04-10T02:45:43.680Z</updated>
+    <updated>2021-04-28T06:38:45.043Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><p><strong>0. 安装Git Node.js npm</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git nodejs npm </span><br></pre></td></tr></table></figure><br>因为npm 官方默认源在墙外所以会出现没进度的情况，所以需要更换国内的淘宝源：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h2><p>Git Node.js npm 这些都安装完成后就可以安装今天的主角Hexo了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>用hexo -v 查看一下版本确保已经安装就绪。<br>接下来初始化一下hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init filename</span><br></pre></td></tr></table></figure><br> filename是你赋予hexo安装的文件夹<br>成功完成hexo的初始化应该是没有报错的，就像这样：<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/14/8MyXfe.md.png" alt="成功初始化Hexo"><br>初始化后的目录是这样：<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/14/8MyOYD.png" alt="Hexo目录"><br>如果是直接安装到当前目录下就可以不加filename参数<br>当然，当前文件夹是需要没有任何文件的，隐藏的文件或文件夹也不行，如果有就会报错：<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/14/8Myz6A.png" alt="报错目录非空"><br>然后就是生成我们的博客文件：<br><code>hexo g</code><br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/14/8Myxld.md.png" alt="生成博客"><br>最后一步，部署到hexo本地服务器了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/14/8M6PTf.png" alt="部署到hexo本地服务器"></p><p><em>将hexo部署到GitHub</em></p><p><em>设置个人域名</em><br><em>发布文章</em></p>]]></content>
     
@@ -174,8 +166,6 @@
     <category term="hexo" scheme="http://blog.mpcloud.top/categories/hexo/"/>
     
     
-    <category term="Hexo" scheme="http://blog.mpcloud.top/tags/Hexo/"/>
-    
   </entry>
   
   <entry>
@@ -183,7 +173,7 @@
     <link href="http://blog.mpcloud.top/posts/6a2567a1.html"/>
     <id>http://blog.mpcloud.top/posts/6a2567a1.html</id>
     <published>2020-03-10T14:06:15.000Z</published>
-    <updated>2021-04-10T02:45:43.680Z</updated>
+    <updated>2021-04-28T06:58:15.851Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h1 id="王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称-序列号”的形式-本质也是一种官方的”超长昵称“"><a href="#王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称-序列号”的形式-本质也是一种官方的”超长昵称“" class="headerlink" title="王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称+序列号”的形式,本质也是一种官方的”超长昵称“"></a>王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称+序列号”的形式,本质也是一种官方的”超长昵称“</h1><h2 id="需要准备的材料："><a href="#需要准备的材料：" class="headerlink" title="需要准备的材料："></a>需要准备的材料：</h2><ol><li>需要root权限</li><li>gg修改器</li><li>能够正常工作的大脑和操作</li></ol><p><em>下方的超长昵称</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">****************************************</span><br></pre></td></tr></table></figure><br>昵称最高63个字符</p><p>防王者荣耀修改内存时闪退方法：<br>删除<br><code>/data/data/com.tencent.tmgp.sgame/lib/libtersafe.so</code></p><p>GG修改器:<br>对游戏游戏隐藏 2 3 4</p><p>设置在A内存里面搜<br>搜D类数据1;12;86,400:9<br>改善12 为64<br>继续搜D类数据42;12::21<br>改善12，批量改成88</p><p>大功告成，现在去复制昵称就可以了<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/15/83Tx2j.jpg" alt="追封7天"></p>]]></content>
     
@@ -192,8 +182,6 @@
     
     
     
-    
-    <category term="王者荣耀" scheme="http://blog.mpcloud.top/tags/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/"/>
     
   </entry>
   

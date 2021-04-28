@@ -18,12 +18,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 免root使用adb &amp; fadtboot </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -62,12 +56,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> termux </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -86,12 +74,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -131,12 +113,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> Android </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -175,12 +151,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -193,12 +163,6 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h1 id="王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称-序列号”的形式-本质也是一种官方的”超长昵称“"><a href="#王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称-序列号”的形式-本质也是一种官方的”超长昵称“" class="headerlink" title="王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称+序列号”的形式,本质也是一种官方的”超长昵称“"></a>王者荣耀修改超长昵称会封号3天，昵称会被官方重置为“违规昵称+序列号”的形式,本质也是一种官方的”超长昵称“</h1><h2 id="需要准备的材料："><a href="#需要准备的材料：" class="headerlink" title="需要准备的材料："></a>需要准备的材料：</h2><ol><li>需要root权限</li><li>gg修改器</li><li>能够正常工作的大脑和操作</li></ol><p><em>下方的超长昵称</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">****************************************</span><br></pre></td></tr></table></figure><br>昵称最高63个字符</p><p>防王者荣耀修改内存时闪退方法：<br>删除<br><code>/data/data/com.tencent.tmgp.sgame/lib/libtersafe.so</code></p><p>GG修改器:<br>对游戏游戏隐藏 2 3 4</p><p>设置在A内存里面搜<br>搜D类数据1;12;86,400:9<br>改善12 为64<br>继续搜D类数据42;12::21<br>改善12，批量改成88</p><p>大功告成，现在去复制昵称就可以了<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://s1.ax1x.com/2020/03/15/83Tx2j.jpg" alt="追封7天"></p>]]></content>
       
       
-      
-        <tags>
-            
-            <tag> 王者荣耀 </tag>
-            
-        </tags>
       
     </entry>
     
