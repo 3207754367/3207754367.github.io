@@ -89,7 +89,7 @@ updated_option: true	#设置是否启用更新的日期
 
 # Pagination 分页
 ## 将per_page设置为0以禁用分页
-per_page: 10
+per_page: 5
 pagination_dir: page
 
 # 包含/排除文件
@@ -102,7 +102,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: next
+theme: materialized
 
 
 # Algolia Search API Key
@@ -178,3 +178,12 @@ lazyload:
   enable: false 
   onlypost: false
   loadingImg: 
+
+
+# hexo-tag-cloud
+tag_cloud:
+  textFont: Trebuchet MS, Helvetica
+  textColor: '#333'
+  textHeight: 25
+  outlineColor: '#E2E1D1'
+  maxSpeed: 0.1 

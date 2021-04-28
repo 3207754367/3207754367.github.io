@@ -33,7 +33,7 @@ tar -xJvf openjdk-11.0.1.tar.xz -C $PREFIX/local/openjdk-11
 ```
 3. 加入环境变量并使其立即生效（以.zshrc为例）
 ``` bash
-echo 'export JAVA_HOME="$PREFIX/local/openjdk-11"\nexport PATH="$PATH:$JAVA_HOME/bin' >> ~/.zshrc  && source ~/.zshrc
+echo 'export JAVA_HOME="$PREFIX/local/openjdk-11"\nexport PATH="$PATH:$JAVA_HOME/bin"' >> ~/.zshrc  && source ~/.zshrc
 ```
 4. 测试是否成功
 ```

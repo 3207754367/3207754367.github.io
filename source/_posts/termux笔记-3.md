@@ -14,11 +14,11 @@ comments:
 
 - 克隆magisk模块作者开源的仓库
 ```
-mkdir -p $PREFIX/local/bin && git clone https://github.com/Magisk-Modules-Repo/adb-ndk $PREFIX/local/bin && chmod +x -R $PREFIX/local/bin/adb-ndk/bin
+mkdir -p $PREFIX/local/bin && git clone https://github.com/Magisk-Modules-Repo/adb-ndk $PREFIX/local/bin/adb-ndk && chmod +x -R $PREFIX/local/bin/adb-ndk/bin
 ```
 - 将克隆下来的仓库加入termux环境变量并使其立即生效
 ```
-echo "export PATH="$PATH:$PREFIX/local/bin/adb-ndk/bin" >> ~/.zshrc && source ~/.zshrc 
+echo 'export PATH="$PATH:$PREFIX/local/bin/adb-ndk/bin"' >> ~/.bashrc && source ~/.bashrc 
 ```
 - 验证是否成功生效(居然支持adb pair 哈哈 )
 ![验证](https://gitee.com/mpcloud/my_picture_bed/raw/master/6ba0ddab.jpg)
