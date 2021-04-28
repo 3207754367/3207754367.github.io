@@ -13,7 +13,7 @@
   </article>
   <%- js([theme.gallery.jquery_js, theme.gallery.lazyload_js, theme.gallery.fancybox_js]) %>
   <script>$("#main article img.lazyload").lazyload({effect:"fadeIn"});</script>
-<% } else if (page.tagcloud && site.tags.length) { %>
+<% } if (page.tagcloud && site.tags.length) { %>
   <style>
     #tagcloud a{margin:0 8px;padding:8px 0;line-height:40px;white-space:nowrap;text-decoration:none;opacity:.87;-webkit-transition:all .2s cubic-bezier(.4,0,.2,1);-o-transition:all .2s cubic-bezier(.4,0,.2,1);transition:all .2s cubic-bezier(.4,0,.2,1)}
     #tagcloud a:hover{opacity:1;text-shadow:1px 1px 3px #444}
@@ -82,7 +82,7 @@
       <blockquote class="mdui-m-t-5">
         <% if (page.license) { %>
           <strong><%- page.license %></strong><br>
-        <% } else if (theme.license && page.license !== false) { %>
+        <% } if (theme.license && page.license !== false) { %>
           <strong><%- theme.license %></strong><br>
         <% } %>
         <strong><%= __('permalink') %></strong><a href="<%- page.permalink %>"><%- page.permalink %></a>

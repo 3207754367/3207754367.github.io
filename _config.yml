@@ -132,7 +132,7 @@ neat_css:
 # 压缩js
 neat_js:
   enable: true
-  mangle: true #打印日志
+  mangle: false #打印日志
   output:
   compress:
   exclude:
@@ -175,15 +175,15 @@ aplayer:
 
 # 图片懒加载
 lazyload:
-  enable: false 
-  onlypost: false
-  loadingImg: 
+  enable: true 
+  onlypost: true
+  loadingImg: https://s1.ax1x.com/2020/04/13/GX0DJ0.gif
 
 
 # hexo-tag-cloud
-tag_cloud:
-  textFont: Trebuchet MS, Helvetica
-  textColor: '#333'
-  textHeight: 25
-  outlineColor: '#E2E1D1'
-  maxSpeed: 0.1 
+#tag_cloud:
+#  textFont: Trebuchet MS, Helvetica
+#  textColor: '#333'
+#  textHeight: 25
+#  outlineColor: '#E2E1D1'
+#  maxSpeed: 0.1 

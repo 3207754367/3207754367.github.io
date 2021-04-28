@@ -1,13 +1,11 @@
 ---
 title: {{ title }}
-date: {{ date }}
 tags:
-keywords: 
 categories: 分类
-comments:
+comments: true
+thumbnail: 文章头图
 description:  概述
 mathjax: true
 ---
-![]()
 <!--more-->
 

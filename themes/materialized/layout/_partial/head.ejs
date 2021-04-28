@@ -17,7 +17,7 @@
     } else if (is_category()) {
       title = __('category') + ': ' + page.category;
     } else if (is_tag()) {
-      title = __('tag') + ': ' + page.tag;
+    title = __('tag') + ': ' + page.tag;
     }
   %>
   <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>

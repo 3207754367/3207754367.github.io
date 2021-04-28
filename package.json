@@ -38,7 +38,6 @@
     "hexo-server": "^1.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-tag-aplayer": "^3.0.4",
-    "hexo-tag-cloud": "^2.1.2",
     "highlight.js": "^9.18.5",
     "node-prismjs": "^0.1.2",
     "node-sass": "^5.0.0",
