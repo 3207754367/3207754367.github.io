@@ -3,7 +3,6 @@ title: termux笔记
 categories: termux
 description: 学习termux的笔记 (1)
 mathjax: true
-tags: termux
 abbrlink: d12c2325
 date: 2021-04-25 12:50:49
 keywords:

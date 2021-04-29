@@ -1,6 +1,5 @@
 ---
 title: Hexo初体验
-tags: Hexo
 abbrlink: 786487f2
 date: 2020-03-14 08:08:54
 description: Hexo搭建个人博客的步骤

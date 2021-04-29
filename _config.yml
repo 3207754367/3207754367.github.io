@@ -34,7 +34,7 @@ pretty_urls:
 # 目录
 source_dir: source 	  #资源目录，文件夹内的文件将上传至github中
 public_dir: public	  #公共目录，用来存放生产的静态文件
-tag_dir: tags      	  #标签目录，默认的tags 实际存放路径为source/tags
+  #tag_dir: tags      	  #标签目录，默认的tags 实际存放路径为source/tags
 archive_dir: archives     #档案目录，默认是archives
 category_dir: categories  #类别目录，默认是categories 实际存放路径为source/categories
 code_dir: downloads/code  #代码目录，默认是downloads/code 

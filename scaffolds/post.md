@@ -1,6 +1,5 @@
 ---
 title: {{ title }}
-tags:
 categories: 分类
 comments: true
 thumbnail: 文章头图

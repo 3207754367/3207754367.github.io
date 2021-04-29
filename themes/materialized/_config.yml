@@ -2,11 +2,11 @@ theme_color: # Theme color. Please go to [Colors](https://www.mdui.org/docs/colo
   primary: indigo
   accent: pink
 
-notice: # Notice or announcement. Support `<a>` tag
+notice:   # Notice or announcement. Support `<a>` tag
 
 favicon: /images/favicon.png # Favicon path
 banner: /images/banner.png # Sidebar background image path
-avatar: https://z3.ax1x.com/2021/04/22/cqR5wR.png  # Avatar image path
+avatar: /images/cqR5wR.png  # Avatar image path
 rss: /atom.xml # RSS link. `hexo-generator-feed` plugin is needed
 
 email: 3207754367@qq.com # Email address
