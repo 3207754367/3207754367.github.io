@@ -36,6 +36,7 @@ analytics: # Site analytics IDs
   google_site_id:
   baidu_site_id:
   cnzz_site_id: 1278918852
+  cloudflare_site_id: 4f1dd2b5db5c42f6a2aeb8f411516211
 pages: # Custom page links. Set with `name` and `link`
 - name: 混元太极拳
   link: /hunyuan
