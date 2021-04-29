@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.mpcloud.top/posts/3db97f61.html</loc>
+    
+    <lastmod>2021-04-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.mpcloud.top/posts/6a2567a1.html</loc>
     
     <lastmod>2021-04-28</lastmod>
@@ -102,7 +109,7 @@
 
   <url>
     <loc>http://blog.mpcloud.top/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -112,35 +119,42 @@
   
   <url>
     <loc>http://blog.mpcloud.top/categories/Android%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.mpcloud.top/categories/hexo/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.mpcloud.top/categories/termux/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.mpcloud.top/categories/win10/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.mpcloud.top/categories/Linux/</loc>
-    <lastmod>2021-04-28</lastmod>
+    <lastmod>2021-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.mpcloud.top/categories/linux/</loc>
+    <lastmod>2021-04-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
