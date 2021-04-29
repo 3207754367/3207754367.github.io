@@ -6,7 +6,7 @@
   <link href="http://blog.mpcloud.top/atom.xml" rel="self"/>
   
   <link href="http://blog.mpcloud.top/"/>
-  <updated>2021-04-29T20:39:41.320Z</updated>
+  <updated>2021-04-29T20:51:39.528Z</updated>
   <id>http://blog.mpcloud.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Termux笔记-批量移除电池优化白名单</title>
+    <link href="http://blog.mpcloud.top/posts/dbe891cd.html"/>
+    <id>http://blog.mpcloud.top/posts/dbe891cd.html</id>
+    <published>2021-04-29T20:59:50.472Z</published>
+    <updated>2021-04-29T20:51:39.528Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h3 id="基于shizuku"><a href="#基于shizuku" class="headerlink" title="基于shizuku"></a>基于shizuku</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/env bash</span></span><br><span class="line"></span><br><span class="line">shizuku dumpsys deviceidle whitelist | grep user | sed <span class="string">&#x27;s/user,//g&#x27;</span> | sed <span class="string">&#x27;s/[0-9]//g&#x27;</span> | sed <span class="string">&#x27;s/,//g&#x27;</span> | sed <span class="string">&#x27;s/^/shizuku dumpsys deviceidle whitelist -/g&#x27;</span> |sh</span><br><span class="line"><span class="comment">#所有user级别应用移出优化白名单</span></span><br><span class="line"><span class="comment">#将QQ和微信重新加入优化白名单</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> com.tencent.mobileqq com.tencent.mm</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    shizuku dumpsys deviceidle whitelist +<span class="variable">$i</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$i</span>已重新加入优化白名单&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">利用shizuku免root批量移除电池优化白名单</summary>
+    
+    
+    
+    <category term="termux" scheme="http://blog.mpcloud.top/categories/termux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>基于Shizuku的预装应用卸载脚本</title>
@@ -55,11 +74,11 @@
   </entry>
   
   <entry>
-    <title>Termux笔记(3)</title>
+    <title>Termux笔记-免Root使用adb&amp;fastboot</title>
     <link href="http://blog.mpcloud.top/posts/2330e9bb.html"/>
     <id>http://blog.mpcloud.top/posts/2330e9bb.html</id>
     <published>2021-04-27T05:34:37.000Z</published>
-    <updated>2021-04-29T19:17:52.260Z</updated>
+    <updated>2021-04-29T20:55:47.640Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h3 id="利用-magisk-模块-ADB-amp-Fastboot-for-Android-NDK-在termux中免root使用-adb-amp-fastboot"><a href="#利用-magisk-模块-ADB-amp-Fastboot-for-Android-NDK-在termux中免root使用-adb-amp-fastboot" class="headerlink" title="利用 magisk 模块 ADB &amp; Fastboot for Android NDK 在termux中免root使用 adb &amp; fastboot"></a>利用 <code>magisk</code> 模块 <code>ADB &amp; Fastboot for Android NDK</code> 在<code>termux</code>中免root使用 <code>adb &amp; fastboot</code></h3><ul><li>克隆magisk模块作者开源的仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $PREFIX&#x2F;local&#x2F;bin &amp;&amp; git clone https:&#x2F;&#x2F;github.com&#x2F;Magisk-Modules-Repo&#x2F;adb-ndk $PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk &amp;&amp; chmod +x -R $PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk&#x2F;bin</span><br></pre></td></tr></table></figure></li><li>将克隆下来的仓库加入termux环境变量并使其立即生效<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;&quot;$PATH:$PREFIX&#x2F;local&#x2F;bin&#x2F;adb-ndk&#x2F;bin&quot;&#39; &gt;&gt; ~&#x2F;.bashrc &amp;&amp; source ~&#x2F;.bashrc </span><br></pre></td></tr></table></figure></li><li>验证是否成功生效(居然支持adb pair 哈哈 )<br><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://gitee.com/mpcloud/my_picture_bed/raw/master/6ba0ddab.jpg" alt="验证"></li></ul>]]></content>
     
@@ -74,11 +93,11 @@
   </entry>
   
   <entry>
-    <title>Termux笔记(2)</title>
+    <title>Termux笔记-解决Am命令出现[1] 9205 Abort</title>
     <link href="http://blog.mpcloud.top/posts/1e50c00b.html"/>
     <id>http://blog.mpcloud.top/posts/1e50c00b.html</id>
     <published>2021-04-25T12:17:46.000Z</published>
-    <updated>2021-04-29T20:42:53.816Z</updated>
+    <updated>2021-04-29T20:53:26.848Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg reinstall termux-am</span><br></pre></td></tr></table></figure><p>重新安装termux-am 包即可</p><p>我写了一个小脚本 遍历所有已安装的包进行重新安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/env bash</span></span><br><span class="line">bin=`pkg list-installed | awk <span class="string">&#x27;&#123; print $1&#125;&#x27;</span> | sed <span class="string">&#x27;s/...........$//g&#x27;</span>`</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$bin</span>                                                                    <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;正在重新安装<span class="variable">$i</span>包&quot;</span> &amp;&amp; pkg reinstall <span class="variable">$i</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -154,7 +173,7 @@
     <link href="http://blog.mpcloud.top/posts/48f1e393.html"/>
     <id>http://blog.mpcloud.top/posts/48f1e393.html</id>
     <published>2020-05-17T01:18:22.000Z</published>
-    <updated>2021-04-28T06:38:32.955Z</updated>
+    <updated>2021-04-29T20:58:58.060Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><p>安装过Gapps套件的小伙伴应该都知道Google开机引导锁,  这其实是因为android的frp机制(factory reset protection)导致的,  android手机恢复出厂设置的操作分为信任和不信任操作: 在解锁装态通过设置里的恢复出厂设置选项进行重置的操作,  属于信任操作.  所以, 在关机状态下通过Fastboot或recovery中进行的重置操作, 就属于不信任操作.  而使用不信任操作进行恢复出厂设置, 开机就会触发frp机制导致设备被锁. 现在让我们来跳过这烦人的验证吧！</p><p>禁用出厂重置保护:</p><h2 id="开机状态下退出Google账户"><a href="#开机状态下退出Google账户" class="headerlink" title="开机状态下退出Google账户"></a>开机状态下退出Google账户</h2><p><strong>避免进行不信任操作, 在刷机前就将Google帐号从系统中移除.</strong></p><p>使<code>出厂重置保护(Factory Reset Protection)</code>变成禁用状态.  如果要禁用出厂重置保护, DPC必须设置<code>disableFactoryResetProtectionAdmin</code>键值为<code>true</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`DevicePolicyManager.setApplicationRestrictions()` 中的</span><br><span class="line">`disableFactoryResetProtectionAdmin`默认值为`<span class="literal">false</span>`</span><br><span class="line"> 禁用FRP只需要将值改为`<span class="literal">true</span>`就行了. </span><br><span class="line">DPC根据它的值来发送广播通知Google Play服务</span><br><span class="line">`com.google.android.gms.auth.FRP_CONFIG_CHANGED` 作出相应改变</span><br></pre></td></tr></table></figure><p>相关文档: <a href="https://developer.android.google.cn/work/dpc/security?hl=fi#disable_factory_reset_protection">google开发者文档</a></p><h2 id="顺时针点屏幕四角法"><a href="#顺时针点屏幕四角法" class="headerlink" title="顺时针点屏幕四角法"></a>顺时针点屏幕四角法</h2><p>这是Gapps套件专属过引导方法，连点屏幕四角就可跳过此引导（<strong>顺时针</strong>方向, 从左上角开始.  Google官方像素系的 Google Service Framework 没有此功能</p><h2 id="更改USER-SETUP-COMPLETE和DEVICE-PROVISIONED"><a href="#更改USER-SETUP-COMPLETE和DEVICE-PROVISIONED" class="headerlink" title="更改USER_SETUP_COMPLETE和DEVICE_PROVISIONED"></a>更改USER_SETUP_COMPLETE和DEVICE_PROVISIONED</h2><p>GoogleSetupWizard完成引导后会把这俩的值由0改为1, 所以我们先它一步在它前面把这俩值改成1就好了</p><ul><li>打开命令行窗口输入以下命令</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put secure user_setup_complete 1</span><br><span class="line">adb shell settings put global device_provisioned 1</span><br><span class="line">adb shell reboot</span><br></pre></td></tr></table></figure><p>或者也可以直接删除<code>system/priv-app/SetupWizard</code>, 如果系统原来自带的Provision没有被Google家的SetupWizard覆盖, SetupWizard被删除后Provision会把这两个值直接设为1.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Provision：</span><br><span class="line"></span><br><span class="line">// Add a persistent setting to allow other apps to know the device has been provisioned.</span><br><span class="line">Settings.Global.putInt(getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 1);</span><br><span class="line">Settings.Secure.putInt(getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 1);</span><br></pre></td></tr></table></figure><h1 id="清空-config-或-frp-分区"><a href="#清空-config-或-frp-分区" class="headerlink" title="清空 config 或 frp 分区"></a>清空 config 或 frp 分区</h1><p>谷歌锁的状态是存放在这个分区上的，那我们只要把这个分区清空就好了。</p><p>由于此分区不存在文件系统，清空的方法是往这个分区里填满0即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/dev/block/bootdevice/by-name/config</span><br></pre></td></tr></table></figure><p>或者: </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/dev/block/bootdevice/by-name/frp</span><br></pre></td></tr></table></figure><p>还可以通过<code>fastboot erase frp</code> 或 <code>fastboot erase config</code> 命令来清除谷歌锁</p>]]></content>
     
@@ -163,7 +182,7 @@
     
     
     
-    <category term="Android教程" scheme="http://blog.mpcloud.top/categories/Android%E6%95%99%E7%A8%8B/"/>
+    <category term="Android" scheme="http://blog.mpcloud.top/categories/Android/"/>
     
     
   </entry>

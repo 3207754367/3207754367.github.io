@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Termux笔记-批量移除电池优化白名单</title>
+      <link href="posts/dbe891cd.html"/>
+      <url>posts/dbe891cd.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><h3 id="基于shizuku"><a href="#基于shizuku" class="headerlink" title="基于shizuku"></a>基于shizuku</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/env bash</span></span><br><span class="line"></span><br><span class="line">shizuku dumpsys deviceidle whitelist | grep user | sed <span class="string">&#x27;s/user,//g&#x27;</span> | sed <span class="string">&#x27;s/[0-9]//g&#x27;</span> | sed <span class="string">&#x27;s/,//g&#x27;</span> | sed <span class="string">&#x27;s/^/shizuku dumpsys deviceidle whitelist -/g&#x27;</span> |sh</span><br><span class="line"><span class="comment">#所有user级别应用移出优化白名单</span></span><br><span class="line"><span class="comment">#将QQ和微信重新加入优化白名单</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> com.tencent.mobileqq com.tencent.mm</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    shizuku dumpsys deviceidle whitelist +<span class="variable">$i</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$i</span>已重新加入优化白名单&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> termux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于Shizuku的预装应用卸载脚本</title>
       <link href="posts/c04ecb87.html"/>
       <url>posts/c04ecb87.html</url>
@@ -42,7 +61,7 @@
     
     
     <entry>
-      <title>Termux笔记(3)</title>
+      <title>Termux笔记-免Root使用adb&amp;fastboot</title>
       <link href="posts/2330e9bb.html"/>
       <url>posts/2330e9bb.html</url>
       
@@ -61,7 +80,7 @@
     
     
     <entry>
-      <title>Termux笔记(2)</title>
+      <title>Termux笔记-解决Am命令出现[1] 9205 Abort</title>
       <link href="posts/1e50c00b.html"/>
       <url>posts/1e50c00b.html</url>
       
@@ -146,7 +165,7 @@
       
       <categories>
           
-          <category> Android教程 </category>
+          <category> Android </category>
           
       </categories>
       
