@@ -48,19 +48,6 @@
         <% } %>
       </div>
     </div>
-    <div class="mdui-collapse-item">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
-        <div class="mdui-list-item-content"><%= __('tag') %></div>
-	<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
-        <% var tags = list_tags({style: 'none', separator: '', class: 'mdui-ripple sidebar_archives'}) %>
-        <%- tags %>
-        <% if (!tags) { %>
-          <a href="javascript:;" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme" style="justify-content: center;"><%= __('no_tag') %></a>
-        <% } %>
-      </div>
 
       </div>
     </div>

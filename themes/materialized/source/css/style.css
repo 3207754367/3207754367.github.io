@@ -568,6 +568,8 @@ img.avatar-animation:hover {
 .mdui-typo .highlight {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: #272822;
+  color: #cccccc;
   border: 1px solid rgba(0, 0, 0, .12);
   border-radius: 2px;
 }
@@ -617,7 +619,7 @@ img.avatar-animation:hover {
   padding-left: 10px;
   padding-right: 10px;
   text-align: right;
-  color: rgba(27, 31, 35, .3);
+  color: #878787;
 }
 
 .mdui-typo .highlight .code pre {
