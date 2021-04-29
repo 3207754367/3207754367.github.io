@@ -6,7 +6,7 @@
   <link href="http://blog.mpcloud.top/atom.xml" rel="self"/>
   
   <link href="http://blog.mpcloud.top/"/>
-  <updated>2021-04-29T19:07:54.048Z</updated>
+  <updated>2021-04-29T19:10:49.092Z</updated>
   <id>http://blog.mpcloud.top/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>基于Shizuku的预装应用卸载脚本</title>
     <link href="http://blog.mpcloud.top/posts/c04ecb87.html"/>
     <id>http://blog.mpcloud.top/posts/c04ecb87.html</id>
-    <published>2021-04-29T19:07:54.056Z</published>
-    <updated>2021-04-29T19:07:54.048Z</updated>
+    <published>2021-04-29T19:10:49.096Z</published>
+    <updated>2021-04-29T19:10:49.092Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><p><a href="https://gitee.com/mpcloud/mypicture/raw/master/remove.sh">https://gitee.com/mpcloud/mypicture/raw/master/remove.sh</a></p><ul><li>如何使用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitee.com/mpcloud/mypicture/raw/master/remove.sh &amp;&amp; chmod +x remove.sh &amp;&amp; ./remove.sh</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span><p><a href="https://gitee.com/mpcloud/mypicture/raw/master/remove.sh">https://gitee.com/mpcloud/mypicture/raw/master/remove.sh</a></p><ul><li>如何使用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitee.com/mpcloud/mypicture/raw/master/remove.sh &amp;&amp; chmod +x remove.sh &amp;&amp; ./remove.sh</span><br></pre></td></tr></table></figure><img src="https://s1.ax1x.com/2020/04/13/GX0DJ0.gif" data-original="https://gitee.com/mpcloud/mypicture/raw/master/edad323b.jpg" alt="效果"></li></ul>]]></content>
     
     
     <summary type="html">使用shizuku在无root机器上免root卸载系统预装软件</summary>
