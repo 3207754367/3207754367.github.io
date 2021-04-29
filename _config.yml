@@ -4,12 +4,12 @@
 ## 汉化：该配置文件由酷友@https://www.coolapk.com/u/827277?from=qr 汉化
 
 # 网站
-title: ma's Blog #网站标题
+title: ma Blog #网站标题
 subtitle: '欢迎来到我的小窝'	#网站小标题
 description: 个人博客 #网站描述
-keywords: blog,android,win10
+keywords: blog,android,win10,linux,hexo
 #关键字
-author: ma's  #网站作者
+author: ma  #网站作者
 language: zh-CN		#语言
 timezone: 'Asia/Shanghai'	#时区
 sitemap:

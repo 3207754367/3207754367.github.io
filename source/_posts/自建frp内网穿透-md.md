@@ -1,8 +1,8 @@
 ---
-title: 自建frp内网穿透.md
+title: 自建frp内网穿透
 categories: linux
 comments: true
-thumbnail: 'https://gitee.com/mpcloud/my_picture_bed/raw/master/86b28955.jpg'
+thumbnail: 'https://gitee.com/mpcloud/mypicture/raw/master/86b28955.jpg'
 description: 在vps上自建属于自己的内网穿透服务
 mathjax: true
 abbrlink: 3db97f61

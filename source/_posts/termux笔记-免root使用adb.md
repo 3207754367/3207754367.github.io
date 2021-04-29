@@ -1,5 +1,5 @@
 ---
-title: termux笔记(3).md
+title: termux笔记-免root使用adb&fastboot
 categories: termux
 description: 利用magisk模块在termux免root使用adb & fastboot
 mathjax: true

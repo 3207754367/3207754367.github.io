@@ -41,8 +41,10 @@ pages: # Custom page links. Set with `name` and `link`
 - name: 混元太极拳
   link: /hunyuan
 links: # Friendship links. Set with `name` and `link`
-- name: Github
-  link: https://github.com
+- name: 雨倩博客
+  link: https://starry.tk
+- name: 星空内网穿透
+  link: https://frp.starry.tk
 
 since: 2019 # Start year, use a 4-digit number. If you don't set the start year, there won't be a "since xxxx" on the bottom of your site
 footer_text: 鄂ICP备20008878号  # Additional text in footer, such as the record information. Support `<a>` tag

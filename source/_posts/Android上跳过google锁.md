@@ -1,6 +1,6 @@
 ---
 title: Android上跳过google锁
-categories: Android教程
+categories: Android
 abbrlink: 48f1e393
 date: 2020-05-17 09:18:22
 comments:
