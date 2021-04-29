@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ma&#39;s Blog</title>
+  <title>ma Blog</title>
   
   <subtitle>欢迎来到我的小窝</subtitle>
   <link href="http://blog.mpcloud.top/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://blog.mpcloud.top/</id>
   
   <author>
-    <name>ma&#39;s</name>
+    <name>ma</name>
     
   </author>
   
