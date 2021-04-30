@@ -3,7 +3,6 @@ Allow: /
 Allow: /archives/
 Allow: /links/
 Allow: /about/
-Allow: /tags/
 Allow: /_posts/
 Allow: /categories/
 Allow: /js/
